@@ -20,16 +20,11 @@ def findErrorNums(nums):
             dct[i] = 1
 
         else: # If the number is already in the dictionary that means the number has appeared more than once so append it to our list and break the loop
+            nums.remove(i) # remove the extra number from the list
             lst.append(i)
             break
 
-    # this for loop is to find the missing number    
-    for i in range(1, n+1):
-
-        # If a particular number is not present in nums then append it to our list and break the loop
-        if i not in nums:
-            lst.append(i)
-            break
+    lst.append(sum(range(n+1)) - sum(nums)) # We subtract the sum of nums from the sum we want which gives us the number that is missing
 
     #Finally return the lst with 2 numbers    
     return lst
