@@ -57,7 +57,7 @@ class Solution:
                 if i.left:
                     next_level.append(i.left)
 
-            count += 1 # Increase the count as we go down
+            count += 1 # We increase the count as we go down
             
             if count != d: # Only if the depth is still not met we will now go down to the next level else we won't as we will need the depth-1 pair of nodes
 
