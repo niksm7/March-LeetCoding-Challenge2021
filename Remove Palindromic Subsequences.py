@@ -13,12 +13,11 @@ Input: s = "abb"
 Output: 2
 Explanation: "abb" -> "bb" -> "". 
 Remove palindromic subsequence "a" then "bb".
-
 '''
 class Solution:
     def removePalindromeSub(self, s: str) -> int:
-        if s == "": # If the string provided is empty we simply return 0
-            
+        if s == "": # If the string provided is empty then we simply return 0
+
             return 0
 
         elif s == s[::-1]: # If the complete string is palindrome then we return 1
